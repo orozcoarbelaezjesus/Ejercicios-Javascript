@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 93</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 93: Clase Array, método join.
+      Crear un vector con los datos de 5 personas. Luego imprimir por pantalla uno abajo de otro utilizando el método join para generar un string y agregarle entre elementos la etiqueta html <br>.
+  */
+
+function aleatorio(){
+  var aleatorio=parseInt(Math.random() * (1001 - 0) + 0);
+  return aleatorio;
+}
+
+var vector=new Array(10);
+var i;
+
+for(i=0;i<10;i++){
+   vector[i]=aleatorio();
+}
+
+var cadena=vector.join(" | ");
+document.write("Vector: " + cadena);
+
+document.write("<br>" + "<br>");
+
+cadena=vector.join("<br>");
+document.write("Vector: " + "<br>" + cadena);
+
+</script>
+
+</body>
+</html>

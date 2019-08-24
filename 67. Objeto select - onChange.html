@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 67</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 67: Objeto select - onChange.
+        Confeccionar una página que muestre un objeto SELECT con distintos tipos de pizzas (Jamón y Queso, Muzzarella, Morrones).
+        Al seleccionar una, mostrar en un objeto de tipo TEXT el precio de la misma.
+    */
+
+  function mostrar_precio(){
+    var opcion=document.getElementById("pizza");
+    document.getElementById("precio").value=opcion.options[opcion.selectedIndex].value;
+  }
+
+  </script>
+  <label for="">Pizza</label><br>
+  <select id="pizza" onChange="mostrar_precio()">
+  <option value="10">Jamón</option>
+  <option value="20">Queso</option>
+  <option value="30">Muzzarella</option>
+  <option value="40">Morrones</option>
+  </select>
+  <br>
+  <label for="precio">Precio</label><br>
+  <input type="text" id="precio" name="precio">
+</body>
+</html>

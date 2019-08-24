@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5</title>
+</head>
+<body>
+  <script>
+  
+  /*
+    Ejercicio # 5: Suma y multiplicación de números ingresados por el usuario.
+      Escribir un programa en el cual se ingresen cuatro números, calcular e informar la suma de
+      los dos primeros y el producto del tercero y el cuarto.
+  */
+
+  var primerNumero=parseInt(prompt("Ingrese el primer numero: "));
+  var segundoNumero=parseInt(prompt("Ingrese el segundo numero: "));
+  var tercerNumero=parseInt(prompt("Ingrese el tercer numero: "));;
+  var cuartoNumero=parseInt(prompt("Ingrese el cuarto numero: "));
+
+  var suma=primerNumero+segundoNumero;
+  var producto=tercerNumero*cuartoNumero;
+
+  document.write("Primer numero: " + primerNumero + "<br>" + "Segundo numero: " + segundoNumero + "<br>" + "Tercer numero: " + tercerNumero + "<br>" + "Cuarto numero: " + cuartoNumero);
+  document.write("<br>" + "<br>" + "Suma del primer y segundo numero: " + suma + "<br>" + "Producto del tercer y cuarto numero: " + producto);
+  </script>
+</body>
+</html>

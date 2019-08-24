@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 10</title>
+</head>
+<body>
+  <script>
+
+  /*
+    Ejercicio # 10: if / else if / else
+      Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo
+      informar su suma y diferencia, en caso contrario informar el producto y la división del
+      primero respecto al segundo.
+  */
+
+  var primerNumero=parseInt(prompt("Ingrese el primer número: "));
+  var segundoNumero=parseInt(prompt("Ingrese el segundo número: "));
+
+  document.write("Primer número: " + primerNumero);
+  document.write("<br>");
+
+  document.write("Segundo número: " + segundoNumero);
+  document.write("<br>" + "<br>");
+
+  if(primerNumero>segundoNumero){
+    var suma=primerNumero+segundoNumero;
+    var diferencia=primerNumero-segundoNumero;
+    document.write("Suma: " + suma + "<br>" + "Diferencia: " + diferencia);
+  }
+  else if(primerNumero<segundoNumero){
+    var producto=primerNumero*segundoNumero;
+    var division=primerNumero/segundoNumero;
+    document.write("Producto: " + producto + "<br>" + "División: " + division);
+  }
+  else{
+    alert("Los números son iguales");
+  }
+
+  </script>
+</body>
+</html>

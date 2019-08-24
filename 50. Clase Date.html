@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 50</title>
+</head>
+<body>
+  <script>
+      /*
+          Ejercicio # 50: Clase Date.
+            Confeccionar un programa que muestre en que cuatrimestre del año nos encontramos.
+            Para esto obtener el mes.
+      */
+      var fecha=new Date();
+      var mes=fecha.getMonth()+1;
+      document.write("Fecha: " + fecha + "<br>");
+      if(mes<5){
+        document.write("Nos encontramos en el primer cuatrimestre del año.");
+      }
+      else if(mes>4 && mes<9){
+        document.write("Nos encontramos en el segundo cuatrimestre del año.");
+      }
+      else{
+        document.write("Nos encontramos en el tercer cuatrimestre del año.");
+      }
+
+  </script>
+</body>
+</html>

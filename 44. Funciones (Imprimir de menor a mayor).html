@@ -1,0 +1,60 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 44</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 44: Funciones (Imprimir de menor a mayor).
+        Confeccionar una función a la cual le envíe tres enteros y los muestre ordenados de mayor a menor y de menor a mayor.
+    */
+
+    function imprimir_menor(pNum,sNum,tNum){
+      var clave=0;
+      if(pNum>=sNum && pNum>=tNum){
+        if(sNum>=tNum){
+          document.write("Números ordenados de mayor a menor: " + pNum + " - " + sNum + " - " + tNum + "<br>");
+          document.write("Números ordenados de menor a mayor: " + tNum + " - " + sNum + " - " + pNum);
+          clave=1;
+        }
+        if(tNum>=sNum && clave==0){
+          document.write("Números ordenados de mayor a menor: " + pNum + " - " + tNum + " - " + sNum + "<br>");
+          document.write("Números ordenados de menor a mayor: " + sNum + " - " + tNum + " - " + pNum);
+          clave=1;
+        }
+      }
+      if(sNum>=pNum && sNum>=tNum && clave==0){
+          if(pNum>=tNum){
+            document.write("Números ordenados de mayor a menor: " + sNum + " - " + pNum + " - " + tNum + "<br>");
+            document.write("Números ordenados de menor a mayor: " + tNum + " - " + pNum + " - " + sNum);
+            clave=1;
+          }
+          if(tNum>=pNum && clave==0){
+            document.write("Números ordenados de mayor a menor: " + sNum + " - " + tNum + " - " + pNum + "<br>");
+            document.write("Números ordenados de menor a mayor: " + pNum + " - " + tNum + " - " + sNum);
+            clave=1;
+          }
+      }
+      if(tNum>=pNum && tNum>=sNum && clave==0){
+          if(pNum>=sNum){
+            document.write("Números ordenados de mayor a menor: " + tNum + " - " + pNum + " - " + sNum + "<br>");
+            document.write("Números ordenados de menor a mayor: " + sNum + " - " + pNum + " - " + tNum);
+            clave=1;
+          }
+          if(sNum>=pNum && clave==0){
+            document.write("Números ordenados de mayor a menor: " + tNum + " - " + sNum + " - " + pNum + "<br>");
+            document.write("Números ordenados de menor a mayor: " + pNum + " - " + sNum + " - " + tNum);
+          }
+      }
+    }
+    var primerNumero=parseInt(prompt("Primer número"));
+    var segundoNumero=parseInt(prompt("Segundo número"));
+    var tercerNumero=parseInt(prompt("Tercer número"));
+    document.write("Primer número: " + primerNumero + "<br>" + "Segundo número: " + segundoNumero + "<br>" + "Tercer número: " + tercerNumero + "<br>");
+    imprimir_menor(primerNumero,segundoNumero,tercerNumero);
+
+  </script>
+</body>
+</html>

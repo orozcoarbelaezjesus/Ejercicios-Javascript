@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 17</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 17: Estructura condicional if (&&)
+      Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha fecha
+      corresponde a Navidad (se debe cargar por separado el dia, el mes y el año)
+    */
+
+    var day=parseInt(prompt("Día: "));
+    var month=parseInt(prompt("Mes: "));
+    var year=parseInt(prompt("Año: "));
+
+    document.write("Fecha ingresada: " + day + "/" + month + "/" + year + "<br>");
+
+    if(day==25 && month==12){
+        document.write("Es navidad.");
+    }
+    else{
+      document.write("No es navidad.");
+    }
+
+  </script>
+</body>
+</html>

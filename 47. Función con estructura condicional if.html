@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 47</title>
+</head>
+<body>
+  <script>
+      /*
+          Ejercicio # 47: Función con estructura condicional if.
+            Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de
+            hasta 5 dígitos.
+      */
+
+      function cantidad(num){
+        var resp="resp";
+        if(num<10){
+            resp="1 dígito.";
+        }
+        if(num>9 && num<100){
+            resp="2 dígitos.";
+        }
+        if(num>99 & num<1000){
+            resp="3 dígitos.";
+        }
+        if(num>999 && num<10000){
+            resp="4 dígitos.";
+        }
+        if(num>9999){
+            resp="5 dígitos o más.";
+        }
+        return resp;
+      }
+
+      var num=parseInt(prompt("Ingrese un número: "));
+      document.write("Número: " + num + "<br>" + "Número de dígitos: " + cantidad(num));
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Ejercicio 96</title>
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 96: Objeto arguments.
+      Confeccionar una función que obtenga y retorne el mayor valor de una lista de enteros
+      que le pasamos como parámetros.
+  */
+
+function retornar_mayor(){
+
+var t=arguments.length;
+var vector=new Array(t);
+
+for(i=0;i<t;i++){
+  vector[i]=arguments[i];
+}
+
+for(i=0;i<t;i++){
+   document.write(vector[i] + " ");
+}
+
+var mayor=vector[0];
+
+for(i=1;i<t;i++){
+   if(vector[i]>mayor){
+      mayor=vector[i];
+   }
+}
+
+document.write("<br>" + mayor);
+
+}
+
+retornar_mayor(30,4,35,2,15);
+
+</script>
+
+</body>
+</html>

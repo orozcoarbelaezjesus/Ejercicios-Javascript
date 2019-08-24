@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 73</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 73: textarea.
+        Confeccionar una página de visitas a un sitio, solicitar ingresar el nombre de una
+        persona, su mail y los comentarios (TEXTAREA). Mostrar luego llamando a la función
+        alert los datos ingresados.
+    */
+    
+  function imprimir(){
+    var nombre=document.getElementById("nombre").value;
+    var correo=document.getElementById("correo").value;
+    var comentarios=document.getElementById("comentarios").value;
+
+    document.write("Nombre: " + nombre + "<br>" + "Correo electrónico: " + correo + "<br>" + "Comentarios: " + comentarios);
+  }
+
+  </script>
+
+  <fieldset>
+    <legend>Libro de visitas</legend>
+    <label for="nombre">Ingrese su nombre</label><br>
+    <input type="text" id="nombre" name="nombre"><br>
+    <label for="correo">Ingrese su correo electrónico</label><br>
+    <input type="text" id="correo" name="correo"><br>
+    <label for="comentarios">Comentarios</label><br>
+    <textarea cols="50" rows="10" id="comentarios"></textarea><br>
+    <input type="button" value="Enviar" onClick="imprimir()">
+  </fieldset>
+</body>
+</html>

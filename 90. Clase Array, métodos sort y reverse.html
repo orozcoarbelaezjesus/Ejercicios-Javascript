@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 90</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+      Ejercicio # 90: Clase Array, mEtodos sort y reverse.
+        Cargar los sueldos de un conjunto de empleados. Finalizar la carga al
+        ingresar cero. Mostrar por pantalla los sueldos ordenados de mayor a menor.
+  */
+
+var vector=new Array();
+var i;
+var sueldo=0;
+
+document.write("Vector con su orden original: ");
+do{
+  sueldo=parseInt(prompt("Número"));
+
+  if(sueldo>0){
+    vector.push(sueldo);
+  }
+
+}while(sueldo!=0);
+
+document.write("Vector en su orden original: ");
+for(i=0;i<vector.length;i++){
+   document.write(vector[i] + ". ");
+}
+
+vector.sort(function(v1,v2) {
+    if (v1>v2)
+      return 1;
+    else
+      return 0;
+  });
+
+document.write("<br>" + "<br>" + "Vector con elementos ordenados de menor a mayor: ");
+for(i=0;i<vector.length;i++){
+   document.write(vector[i] + ". ");
+}
+
+vector.reverse();
+
+document.write("<br>" + "<br>" + "Vector con elementos ordenados de mayor a menor: ");
+for(i=0;i<vector.length;i++){
+   document.write(vector[i] + ". ");
+}
+
+</script>
+
+</body>
+</html>

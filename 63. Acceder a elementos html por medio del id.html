@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 63</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 63: Acceder a elementos html por medio del id.
+        Crear un programa que permita cargar un entero en un text y al presionar un botón nos muestre dicho valor elevado al
+        cubo (emplear la función alert).
+    */
+  function elevar_cubo(){
+    var num=document.getElementById("numero").value;
+    var potencia=Math.pow(num,3);
+    alert(potencia);
+  }
+
+  </script>
+  <label for="numero">Ingrese aqui un número entero</label>
+  <input type="text" id="numero" name="numero"><br>
+  <input type="button" value="Operar" onClick="elevar_cubo()">
+</body>
+</html>

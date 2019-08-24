@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 72</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 72: Control tipo radio.
+        Confeccionar una página que muestre dos objetos de la clase RADIO solicitando que
+        seleccione si es mayor de 18 años o no. Al presionar un botón mostrar un alert
+        indicando si puede ingresar al sitio o no.
+    */
+
+  function alerta(){
+    if(document.getElementById("si").checked){
+      alert("Si puede ingresar al sitio.");
+    }
+    if(document.getElementById("no").checked){
+      alert("No puede ingresar al sitio.");
+    }
+  }
+
+  </script>
+
+  <h4>Es usted mayor de 18 años?</h4>
+  <input type="radio" name="edad" id="si" value="1">Sí<br>
+  <input type="radio" name="edad" id="no" value="2">No<br>
+  <input type="button" value="Enviar" onClick="alerta()">
+</body>
+</html>

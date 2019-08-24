@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 88</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*
+      Ejercicio # 88: Clase Array, métodos unshift y shift.
+        Ingresar valores por teclado. Los valores menores a 0 ingresarlos al principio del vector y los mayores o iguales a 1 ingresarlos al final. Se finaliza la carga de datos al ingresar el cero. Cuando sale del do/while extraer el último valor ingresado que es el cero del vector. Imprimir el vector en la página.
+  */
+
+var i;
+var num;
+var vector=new Array();
+
+do{
+  num=parseInt(prompt("Ingrese un número positivo o negativo (cero para finalizar)"));
+  if(num>=0){
+     vector.push(num);
+  }
+  if(num<0){
+     vector.unshift(num);
+  }
+}while(num!=0);
+
+vector.pop();
+
+document.write("Vector: ");
+
+for(i=0;i<vector.length;i++){
+  document.write(vector[i] + ". ");
+}
+
+</script>
+
+</body>
+</html>

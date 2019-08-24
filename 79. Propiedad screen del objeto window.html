@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 79</title>
+</head>
+<body>
+  <script>
+  /*
+      Ejercicio # 79: Propiedad screen del objeto window.
+        Confeccionar un programa que al presionar un botón aparezca una ventana que ocupe todo
+        el ancho del monitor y la mitad de su altura.
+  */
+
+  function nueva_ventana(){
+    var ventana=open('','','width='+ screen.availWidth +',height='+screen.availHeight/2);
+    ventana.document.write("Nueva ventana");
+  }
+
+  </script>
+  <input type="button" value="Abrir ventana" onClick="nueva_ventana()">
+</body>
+</html>

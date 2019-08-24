@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 61</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 61: Clase String (reconocer espacio entre pálabras).
+        Codifique un programa que permita cargar una oración por teclado, luego mostrar cada palabra ingresada en una línea distinta.
+        Por ejemplo si cargo:
+        La mañana está fría.
+        Debe aparecer:
+        La
+        mañana
+        está
+        fría.
+    */
+
+    var oracion=prompt("Ingrese una oración");
+    document.write("Usted ingreso: " + oracion + "<br>" + "Oración con saltos de línea en cada espacio:" + "<br>" + "<br>");
+    var i=0;
+    var tam=oracion.length;
+    for(i=0;i<tam;i++){
+      if(oracion.charAt(i)!=" "){
+        document.write(oracion.charAt(i));
+      }
+      else{
+        document.write("<br>");
+      }
+    }
+
+
+  </script>
+</body>
+</html>

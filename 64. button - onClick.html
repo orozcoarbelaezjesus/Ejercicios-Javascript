@@ -1,0 +1,35 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 64</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicio # 64: button / onClick; 
+          Cargar dos números en objetos de tipo text y al presionar un botón, mostrar el mayor.
+    */
+
+  function mostrar_mayor(){
+    var primerValor=document.getElementById("numUno").value;
+    var segundoValor=document.getElementById("numDos").value;
+    if(primerValor>segundoValor){
+      alert("El número mayor es: " + primerValor);
+    }
+    else if(segundoValor>primerValor){
+      alert("El número mayor es: " + segundoValor);
+    }
+    else{
+      alert("Los números son iguales.");
+    }
+  }
+
+  </script>
+  <label for="numUno">Ingrese aqui el primer valor</label><br>
+  <input type="text" id="numUno" name="numUno"><br>
+  <label for="numDos">Ingrese aqui el segundo valor</label><br>
+  <input type="text" id="numDos" name=numDos><br>
+  <input type="button" value="Mostrar mayor" onClick="mostrar_mayor()">
+</body>
+</html>

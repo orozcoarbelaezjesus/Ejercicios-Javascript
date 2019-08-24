@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 81</title>
+</head>
+<body>
+  <script>
+  
+  /*
+    Ejercicio # 81: Programación orientada a objetos en javascript.
+      Confeccionar una clase llamada suma, que contenga dos atributos (valor1, valor2) y tres
+      métodos: cargarvalor1, cargarvalor2 y retornarresultado. Implementar la clase suma.
+      La definición de un objeto de la clase que deben plantear es:
+
+        var s=new suma();
+        s.primerValor(10);
+        s.segundoValor(20);
+        document.write('La suma de los dos valores es:'+s.retornarResultado());
+  */
+
+  function Suma(primerValor,segundoValor){
+    this.valor1=primerValor;
+    this.valor2=segundoValor;
+    this.cargarValor1=cargarValor1;
+    this.cargarValor2=cargarValor2;
+    this.retornarResultado=retornarResultado;
+  }
+
+  function cargarValor1(primerValor){
+    this.valor1=primerValor;
+  }
+
+  function cargarValor2(segundoValor){
+    this.valor2=segundoValor;
+  }
+
+  function retornarResultado(primerValor,segundoValor){
+    var resultado=primerValor+segundoValor;
+    return resultado;
+  }
+
+  var primeraSuma=new Suma();
+  primeraSuma.cargarValor1(10);
+  primeraSuma.cargarValor2(20);
+
+  document.write(primeraSuma.valor1 + "<br>" + primeraSuma.valor2 + "<br>" + "Resultado: " + retornarResultado(primeraSuma.valor1,primeraSuma.valor2));
+
+  </script>
+
+</body>
+</html>

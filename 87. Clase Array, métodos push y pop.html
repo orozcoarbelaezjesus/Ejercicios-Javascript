@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 87</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  /*
+    Ejercicio # 87: Clase Array, métodos push y pop.
+      Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000.
+      Luego extraer los dos últimos elementos sumarlos y mostrarlos.
+      Imprimir también el tamaño final del vector.
+  */
+
+function aleatorio(){
+  var aleatorio=parseInt(Math.random() * (1001 - 1) + 1);
+  return aleatorio;
+}
+
+var vector=new Array();
+var i;
+var num;
+
+document.write("Vector: ");
+for(i=0;i<5;i++){
+  num=aleatorio();
+  vector.push(num);
+  document.write(vector[i] + ". ");
+}
+document.write("<br>" + "Coposición final del vector: " + vector.length);
+
+var tam=vector.length;
+
+document.write("<br>" + "<br>" + "Dos últimos números del vector: " + vector[tam-2] + " y " + vector[tam-1]);
+
+var suma=vector[tam-1]+vector[tam-2];
+
+document.write("<br>" + "<br>" + "Suma de los dos últimos elementos: " + suma);
+
+
+vector.pop();
+vector.pop();
+
+document.write("<br>" + "<br>" + "Coposición final del vector: ");
+for(i=0;i<vector.length;i++){
+  document.write(vector[i] + ". ");
+}
+
+document.write("<br>" +  "Tamaño del vector luego de aplicar el pop: " + vector.length);
+
+</script>
+
+</body>
+</html>

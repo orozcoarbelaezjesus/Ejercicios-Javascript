@@ -1,0 +1,52 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 69</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 69: select - text - value.
+        Confeccionar una página que permita seleccionar una pizza y la cantidad de unidades. Luego al presionar un botón calcular
+        el importe a pagar.
+        Utilizar un objeto de la clase SELECT para la selección de la pizza, pudiendo ser:
+        Queso: $ 4.
+        Jamón y queso: $ 6.
+        Especial: $ 10.
+        A la cantidad de pizzas cargarla en un objeto de la clase TEXT y en otro objeto de la clase TEXT mostrar el importe total
+        a abonar.
+    */
+    
+  function mostrar(){
+    var seleccion=document.getElementById("pizza");
+    document.getElementById("precio").value=seleccion.options[seleccion.selectedIndex].value;
+  }
+
+  function calcular(){
+    var precio=document.getElementById("precio").value;
+    precio=parseInt(precio);
+    var cantidad=document.getElementById("cantidad").value;
+    cantidad=parseInt(cantidad);
+    total=precio*cantidad;
+    document.getElementById("total").value=total;
+  }
+
+  </script>
+
+  <label for="pizza">Pizzas</label><br>
+  <select id="pizza" onChange="mostrar()">
+    <option value="4">Queso</option>
+    <option value="6">Jamón y Queso</option>
+    <option value="10">Especial</option>
+  </select><br>
+  <label for="precio">Precio</label>
+  <br><input type="text" id="precio"><br>
+  <label for="cantidad">Cantidad</label><br>
+  <input type="text" id="cantidad"><br><br>
+  <label for="total">Total</label><br>
+  <input type="text" id="total"><br>
+  <input type="button" value="Calcular total" onClick="calcular()">
+
+</body>
+</html>

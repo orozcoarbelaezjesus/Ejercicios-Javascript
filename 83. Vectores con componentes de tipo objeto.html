@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 83</title>
+</head>
+<body>
+  <script>
+  
+  /*
+    Ejercicio # 83: vectores con componentes de tipo objeto.
+      Confeccionar una clase persona que permita almacenar el nombre y la edad. Luego definir
+      un vector de 4 componentes de tipo persona. Imprimir el nombre de la persona de mayor
+      edad; decir también si hay más de una persona con la edad mayor.
+  */
+
+  function P(nombre,edad){
+    this.nombre=nombre;
+    this.edad=edad;
+    this.ingresarNombre=ingresarNombre;
+    this.ingresarEdad=ingresarEdad;
+  }
+
+  function ingresarNombre(){
+    var nombre=prompt("Nombre");
+    return nombre;
+  }
+
+  function ingresarEdad(){
+    var edad=parseInt(prompt("Edad"));
+    return edad;
+  }
+
+  var i=0;
+  var vector=new Array(4);
+
+  for(i=0;i<4;i++){
+    vector[i]=new P();
+    vector[i].nombre=ingresarNombre();
+    vector[i].edad=ingresarEdad();
+  }
+
+  for(i=1;i<=4;i++){
+    document.write("Persona " + i + "<br>" + "Nombre: " + vector[i-1].nombre + "<br>" + "Edad: " + vector[i-1].edad + "<br>" + "<br>");
+  }
+
+  document.write("Personas de mayor edad: ");
+
+  if(vector[0].edad>=vector[1].edad && vector[0].edad>=vector[2].edad && vector[0].edad>=vector[3].edad){
+    document.write(vector[0].nombre + " (" + vector[0].edad + " años de edad). ");
+  }
+  if(vector[1].edad>=vector[0].edad && vector[1].edad>=vector[2].edad && vector[1].edad>=vector[3].edad){
+    document.write(vector[1].nombre + " (" + vector[1].edad + " años de edad). ");
+  }
+  if(vector[2].edad>=vector[0].edad && vector[2].edad>=vector[1].edad && vector[2].edad>=vector[3].edad){
+    document.write(vector[2].nombre + " (" + vector[2].edad + " años de edad). ");
+  }
+  if(vector[3].edad>=vector[0].edad && vector[3].edad>=vector[1].edad && vector[3].edad>=vector[2].edad){
+    document.write(vector[3].nombre + " (" + vector[3].edad + " años de edad). ");
+  }
+  </script>
+
+</body>
+</html>

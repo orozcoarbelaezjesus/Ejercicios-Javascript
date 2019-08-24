@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 92</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+      Ejercicio # 92: Clase Array, método slice.
+        Crear un vector de 10 elementos con valores aleatorios comprendidos
+        entre 0 y 1000. Buscar el menor y luego generar otro vector a partir
+        de dicha posición hasta el final.
+  */
+
+function aleatorio(){
+  var aleatorio=parseInt(Math.random() * (1001 - 0) + 0);
+  return aleatorio;
+}
+
+var vector=new Array(10);
+var vector_copia=new Array();
+
+
+document.write("Primer vector: ");
+for(i=0;i<10;i++){
+   vector[i]=aleatorio();
+   document.write(vector[i] + ". ");
+}
+
+
+var menor=Math.min.apply(null, vector);
+var posicion;
+
+document.write("<br>" + "<br>" + "Número menor: " + menor);
+
+for(i=9;i>=0;i--){
+   if(vector[i]==menor){
+      posicion=i;
+   }
+}
+
+vector_copia=vector.slice(posicion,vector.length);
+
+document.write("<br>" + "<br>" + "Vector copia: ");
+for(i=0;i<vector_copia.length;i++){
+   document.write(vector_copia[i] + ". ");
+}
+
+</script>
+
+</body>
+</html>

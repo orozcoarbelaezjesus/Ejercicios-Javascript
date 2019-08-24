@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 82</title>
+</head>
+<body>
+  <script>
+  
+  /*
+    Ejercicio # 82: Definición de varias clases.
+      Plantear una clase persona (que permita cargar por teclado su nombre y edad).
+      Por otro lado crear una clase empresa que tenga como atributo la edad tope para que una
+      persona pueda ingresar como trabajador en la misma (60 años)
+      Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la clase persona y 1
+      de la clase empresa. Mostrar cuántas de esas personas están inhabilidadas para ingresar como
+      trabajadores de acuerdo a la edad tope.
+  */
+
+  function P(nombre,edad){
+    this.nombre=nombre;
+    this.edad=edad;
+    this.cargarNombre=cargarNombre;
+    this.cargarEdad=cargarEdad;
+  }
+
+  function cargarNombre(){
+    var nombre=prompt("Nombre: ");
+    return nombre;
+  }
+
+  function cargarEdad(){
+    var edad=parseInt(prompt("Edad: "));
+    return edad;
+  }
+
+  function E(nombre){
+    this.nombre="Empresa";
+    this.edad=60;
+  }
+
+  var empresa=new E();
+
+  var personaUno=new P();
+  personaUno.nombre=cargarNombre();
+  personaUno.edad=cargarEdad();
+  document.write("Trabajador 1" + "<br>");
+  document.write("Nombre: " + personaUno.nombre);
+  document.write("<br>" + "Edad: " + personaUno.edad + "<br>");
+  if(personaUno.edad<=empresa.edad){
+    document.write("Cuenta con la edad requerida.");
+  }
+  else{
+    document.write("No cumple con la edad requerida.");
+  }
+
+  var personaDos=new P();
+  personaDos.nombre=cargarNombre();
+  personaDos.edad=cargarEdad();
+  document.write("<br>" + "<br>" + "Trabajador 2" + "<br>");
+  document.write("Nombre: " + personaDos.nombre);
+  document.write("<br>" + "Edad: " + personaDos.edad + "<br>");
+  if(personaDos.edad<=empresa.edad){
+    document.write("Cuenta con la edad requerida.");
+  }
+  else{
+    document.write("No cumple con la edad requerida.");
+  }
+
+  var personaTres=new P();
+  personaTres.nombre=cargarNombre();
+  personaTres.edad=cargarEdad();
+  document.write("<br>" + "<br>" + "Trabajador 3" + "<br>");
+  document.write("Nombre: " + personaTres.nombre);
+  document.write("<br>" + "Edad: " + personaTres.edad + "<br>");
+  if(personaTres.edad<=empresa.edad){
+    document.write("Cuenta con la edad requerida.");
+  }
+  else{
+    document.write("No cumple con la edad requerida.");
+  }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 59</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicio # 59: Clase String - indexOf.
+          Realizar un programa que permita cargar una dirección de mail e implementar una función que verifique si el String tiene
+          cargado el carácter @.
+    */
+
+    var correo=prompt("Ingrese su correo electronico");
+    var verificar=correo.indexOf("@");
+
+    if(verificar!=-1){
+      document.write("Registro exitoso");
+    }
+    else{
+      document.write("La dirección no posee el @");
+    }
+
+  </script>
+</body>
+</html>

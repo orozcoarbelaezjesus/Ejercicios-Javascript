@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 42</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 42: Estructutra repetitiva for (promedio de edad).
+        Se cuenta con la siguiente información:
+        Las edades de 5 estudiantes del turno mañana.
+        Las edades de 6 estudiantes del turno tarde.
+        Las edades de 11 estudiantes del turno noche.
+        Las edades de cada estudiante deben ingresarse por teclado.
+        a) Obtener el promedio de las edades de cada turno (tres promedios).
+        b) Imprimir dichos promedios (promedio de cada turno).
+        c) Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene un promedio de edades mayor.
+    */
+
+    var edad;
+    var i;
+    var edad_mañana=0;
+    var edad_tarde=0;
+    var edad_noche=0;
+    var prom_mañana=0;
+    var prom_tarde=0;
+    var prom_noche=0;
+
+    document.write("Turno: Mañana." + "<br>");
+    for(i=1;i<6;i++){
+      edad=parseInt(prompt("Turno: Mañana. Edad " + i));
+      document.write(i + ". " + edad + "<br>");
+      edad_mañana=edad_mañana+edad;
+    }
+
+    document.write("<br>" + "Turno: Tarde." + "<br>");
+
+    for(i=1;i<7;i++){
+      edad=parseInt(prompt("Turno: Tarde. Edad " + i));
+      document.write(i + ". " + edad + "<br>");
+      edad_tarde=edad_tarde+edad;
+    }
+
+      document.write("<br>" + "Turno: Noche." + "<br>");
+
+    for(i=1;i<12;i++){
+      edad=parseInt(prompt("Turno: Noche. Edad " + i));
+      document.write(i + ". " + edad + "<br>");
+      edad_noche=edad_noche+edad;
+    }
+
+    prom_mañana=edad_mañana/5;
+    prom_tarde=edad_tarde/6;
+    prom_noche=edad_noche/11;
+
+    document.write("<br>" + "Turno: Mañana" + "<br>" + "Promedio de edad: " + prom_mañana + "<br>" + "<br>" + "Turno: Tarde" + "<br>" + "Promedio de edad: " + prom_tarde + "<br>" + "<br>" + "Turno: Noche" + "<br>" + "Promedio de edad: " + prom_noche + "<br>" + "<br>" + "Turno con promedio de edad mas alto: ");
+
+    if(prom_mañana>=prom_tarde && prom_mañana>=prom_noche){
+      document.write("Mañana. ");
+    }
+    if(prom_tarde>=prom_mañana && prom_tarde>=prom_noche){
+      document.write("Tarde. ");
+    }
+    if(prom_noche>=prom_mañana && prom_noche>=prom_tarde){
+      document.write("Noche.");
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 41</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 41: Estructura repetitiva for (números negativos, positivos, múltiplos).
+        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+        a) La cantidad de valores negativos ingresados.
+        b) La cantidad de valores positivos ingresados.
+        c) La cantidad de múltiplos de 15.
+        d) El valor acumulado de los números ingresados que son pares.
+    */
+
+    var num=0;
+    var i=0;
+    var negativos=0;
+    var positivos=0;
+    var suma=0;
+    var multiplos=0;
+    var pares=0;
+
+    for(i=1;i<11;i++){
+      num=parseInt(prompt("Ingrese un número"));
+      document.write(i + ". " + num + "<br>");
+      if(num>0){
+        positivos=positivos+1;
+      }
+      if(num<0){
+        negativos=negativos+1;
+      }
+      if(num%15==0 && num!=0){
+        multiplos=multiplos+1;
+      }
+      if(num%2==0){
+        pares=pares+1;
+        suma=suma+num;
+      }
+    }
+
+    document.write("<br>" + "Números positivos ingresados: " + positivos + "<br>" + "Números negativos ingresados: " + negativos + "<br>" + "Multiplos de 15: " + multiplos + "<br>" + "Números pares ingresados: " + pares + "<br>" + "Valor acumulado de todos los números pares: " + suma);
+
+  </script>
+</body>
+</html>

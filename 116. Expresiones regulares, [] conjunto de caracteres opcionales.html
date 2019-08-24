@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Ejercicio 116</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 116: Expresiones regulares: [] conjunto de caracteres opcionales.
+      Ingresar una clave que no finalice en vocal.
+  */
+  var palabra=prompt('Ingrese una palabra','');
+  var patron=/[^aeiouAEIOUáéíóú]$/;
+  if (patron.test(palabra))
+    alert('La palabra no finaliza con vocal');
+  else
+    alert('La palabra finaliza con vocal');
+</script>
+
+</body>
+</html>

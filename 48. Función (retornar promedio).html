@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 48</title>
+</head>
+<body>
+  <script>
+      /*
+        Ejercicio # 48: Función (retornar promedio).
+          Elaborar una función que reciba tres enteros y retorne el promedio.
+      */
+
+      function promedio(primerNumero,segundoNumero,tercerNumero){
+        var promedio=(primerNumero+segundoNumero+tercerNumero)/3;
+        return promedio;
+      }
+
+      var primerNumero=parseInt(prompt("Ingrese el primer número: "));
+      var segundoNumero=parseInt(prompt("Ingrese el segundo número: "));
+      var tercerNumero=parseInt(prompt("Ingrese el tercer número: "));
+      document.write("Primer número: " + primerNumero);
+      document.write("<br>");
+      document.write("Segundo número: " + segundoNumero);
+      document.write("<br>");
+      document.write("Tercer número: " + tercerNumero);
+      document.write("<br>");
+      document.write("Promedio: " + promedio(primerNumero,segundoNumero,tercerNumero));
+
+  </script>
+</body>
+</html>

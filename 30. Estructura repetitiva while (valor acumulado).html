@@ -1,0 +1,58 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 30</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 30: Estructura repetitiva while (valor acumulado).
+        Realizar un programa que permita cargar dos listas de 3 valores cada una. Informar con un mensaje cual
+        de las dos listas tiene un valor acumulado mayor (mensajes 'Lista 1 mayor', 'Lista 2 mayor', 'Listas
+        iguales')
+        Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.
+    */
+
+    var listaUno=0;
+    var listaDos=0;
+    var num=0;
+    var contador=1;
+
+    document.write("Lista 1:" + "<br>");
+
+    while(contador<4){
+      num=parseInt(prompt("Lista 1. Número " + contador));
+      document.write("Número " + contador + ": " + num + "<br>");
+      listaUno=listaUno+num;
+      contador=contador+1;
+    }
+    document.write("<br>");
+    contador=1;
+    document.write("Lista 2: " + "<br>");
+
+    while(contador<4){
+      num=parseInt(prompt("Lista 2. Número " + contador));
+      document.write("Número " + contador + ": " + num + "<br>");
+      listaDos=listaDos+num;
+      contador=contador+1;
+    }
+
+    document.write("Valor acumulado lista uno: " + listaUno + "<br>");
+    document.write("Valor acumulado lista dos: " + listaDos + "<br>");
+
+    if(listaUno>listaDos){
+      document.write("El mayor valor acumulado es el de la lista número uno.");
+    }
+
+    else if(listaUno<listaDos){
+      document.write("El mayor valor acumulado es el de la lista número dos.");
+    }
+
+    else{
+      document.write("Las listas poseen el mimo valor acumulado.");
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 52</title>
+</head>
+<body>
+  <script>
+
+      /*
+        Ejercicio # 52: Clase Array (suma de vectores).
+          Realizar un programa que pida la carga de dos vectores numéricos. Obtener la suma de los dos vectores, dicho
+          resultado guardarlo en un tercer vector del mismo tamaño. Sumar componente a componente.
+          El tamaño del vector es a elección.
+      */
+
+      var tam=parseInt(prompt("Qué cantidad de elementos desea en los vectores?"));
+      var primerVector=new Array(tam);
+      var segundoVector=new Array(tam);
+      var tercerVector=new Array(tam);
+      document.write("Primer vector: ");
+      for(i=0;i<tam;i++){
+        primerVector[i]=parseInt(prompt("Primer vector. Posición: " + i + ". Ingrese un número"));
+        document.write(primerVector[i] + " ");
+      }
+
+      document.write("<br>" + "Segundo vector: ");
+      for(i=0;i<tam;i++){
+        segundoVector[i]=parseInt(prompt("Segundo vector. Posición " + i + ". Ingrese un número"));
+        document.write(segundoVector[i] + " ");
+      }
+      document.write("<br>" + "<br>" + "Tercer Vector: ");
+      for(i=0;i<tam;i++){
+        tercerVector[i]=primerVector[i]+segundoVector[i];
+        document.write(tercerVector[i] + " ");
+      }
+
+  </script>
+</body>
+</html>

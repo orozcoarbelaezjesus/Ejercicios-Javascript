@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 94</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 93: Clase Array, método concat.
+      Concatenar dos vectores en un nuevo vector.
+  */
+
+function aleatorio(){
+  var aleatorio=parseInt(Math.random() * (1001 - 0) + 0);
+  return aleatorio;
+}
+
+var vector1=new Array(10);
+var vector2=new Array(10);
+var i;
+
+for(i=0;i<10;i++){
+   vector1[i]=aleatorio();
+   vector2[i]=aleatorio();
+}
+
+var cad_vector1=vector1.join(" - ");
+var cad_vector2=vector2.join(" / ");
+
+document.write("Primer vector: " + cad_vector1);
+document.write("<br>" + "Segundo vector: " + cad_vector2);
+
+var vector3=vector1.concat(vector2);
+var cad_vector3=vector3.join("<br>");
+
+document.write("<br>" + "<br>" + "Tercer vector: " + cad_vector3);
+
+</script>
+
+</body>
+</html>

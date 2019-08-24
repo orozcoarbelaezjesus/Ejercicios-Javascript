@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 15</title>
+</head>
+<body>
+  <script>
+
+    /*
+     Ejercicio # 15: Estructura condicional if (Número con una, dos o tres cifras)
+       Confeccionar un programa que permita cargar un número entero positivo de hasta tres cifras
+       y muestre un mensaje indicando si tiene 1, 2, o 3 cifras.
+    */
+
+    var numero=parseInt(prompt("Ingrese un número entero positivo: "));
+
+    if(numero<10){
+      document.write("El número posee una cifra.");
+    }
+
+    else if(numero>9 && numero<100){
+      document.write("El número posee dos cifras.");
+    }
+
+    else{
+      document.write("El número posee tres o más cifras.");
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 39</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 39: Estructura repetitiva for (tipos de triángulo).
+        Realizar un programa que lea los lados de 4 triángulos, e informar:
+        a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún
+        lado igual)
+        b) Cantidad de triángulos de cada tipo.
+        c) Tipo de triángulo del que hay menor cantidad.
+    */
+
+    var i=1;
+    var ladoA;
+    var ladoB;
+    var ladoC;
+    var isos=0;
+    var equi=0;
+    var esc=0;
+
+    for(i=1;i<5;i++){
+      ladoA=parseInt(prompt("Triangulo " + i + ". Lado A"));
+      ladoB=parseInt(prompt("Triangulo " + i + ". Lado B"));
+      ladoC=parseInt(prompt("Triangulo " + i + ". Lado C"));
+      document.write("Triangulo " + i + "<br>" + "Lado A: " + ladoA + "<br>" + "Lado B: " + ladoB + "<br>" + "Lado C: " + ladoC + "<br>" + "Clasificación: ");
+      if(ladoA==ladoB && ladoB==ladoC){
+          equi=equi+1;
+          document.write("Equilatero." + "<br>" + "<br>");
+      }
+      else if(ladoA!=ladoB && ladoA!=ladoC && ladoB!=ladoC){
+          esc=esc+1;
+          document.write("Escaleno." + "<br>" + "<br>");
+      }
+      else{
+          isos=isos+1;
+          document.write("Isosceles." + "<br>" + "<br>");
+      }
+    }
+
+    document.write("Cantidad de triangulos equilateros: " + equi + "<br>");
+    document.write("Cantidad de triangulos escalenos: " + esc + "<br>");
+    document.write("Cantidad de triangulos isosceles: " + isos + "<br>");
+    if(equi<=esc && equi<=isos){
+        document.write("Tipo de triangulo del que hay menos cantidad: Equilatero." + "<br>");
+    }
+    if(esc<=equi && esc<=isos){
+        document.write("Tipo de triangulo del que hay menos cantidad: Escaleno." + "<br>");
+    }
+    if(isos<=equi && isos<=esc){
+        document.write("Tipo de triangulo del que hay menos cantidad: Isosceles." + "<br>");
+    }
+  </script>
+</body>
+</html>

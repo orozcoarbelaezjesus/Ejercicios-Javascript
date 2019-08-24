@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Ejercicio 112</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 112: Funciones setInterval, ClearInterval, setTimeout y clearTimeout.
+      Confeccionar una página que luego de 10 segundos redireccione a otro
+      sitio empleando para ello la función setTimeout.
+  */
+
+function nueva_locacion(){
+   window.location="www.lanacion.com.ar";
+}
+
+document.write("En breve será redireccionado a Google");
+
+var enlace=setTimeout(nueva_locacion,10000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 40</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 40: Estructura repetitiva for (coordenadas en el plano cartesiano).
+        Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano.
+        Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante.
+        Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.
+    */
+
+    var cant_puntos=parseInt(prompt("Cantidad de puntos a procesar"));
+    var x=0;
+    var y=0;
+    var i=0;
+    var primer_cuadrante=0;
+    var segundo_cuadrante=0;
+    var tercer_cuadrante=0;
+    var cuarto_cuadrante=0;
+
+    for(i=1;i<=cant_puntos;i++){
+      x=parseInt(prompt(i + ": X"));
+      y=parseInt(prompt(i + ": Y"));
+      document.write("Punto " + i + "<br>" + "X: " + x + "<br>" + "Y: " + y + "<br>");
+      if(x>0 && y>0){
+          document.write("El punto se encuentra en el primer cuadrante." + "<br>" + "<br>");
+          primer_cuadrante=primer_cuadrante+1;
+      }
+      if(x>0 && y<0){
+        document.write("El punto se encuentra en el cuarto cuadrante." + "<br>" + "<br>");
+        cuarto_cuadrante=cuarto_cuadrante+1;
+      }
+      if(x<0 && y<0){
+        document.write("El punto se encuentra en el tercer cuadrante." + "<br>" + "<br>");
+        tercer_cuadrante=tercer_cuadrante+1;
+      }
+      if(x<0 && y>0){
+        document.write("El punto se encuentra en el segundo cuadrante" + "<br>" + "<br>");
+        segundo_cuadrante=segundo_cuadrante+1;
+      }
+    }
+
+    document.write("<br>" + "Puntos ingresados en el primer cuadrante: " + primer_cuadrante + "<br>" + "Puntos ingresados en el segundo cuadrante: " + segundo_cuadrante + "<br>" + "Puntos ingresados en el tercer cuadrante: " + tercer_cuadrante + "<br>" + "Puntos ingresados en el cuarto cuadrante: " + cuarto_cuadrante);
+
+  </script>
+</body>
+</html>

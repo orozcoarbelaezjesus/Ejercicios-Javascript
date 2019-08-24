@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 57</title>
+</head>
+<body>
+  <script>
+
+      /*
+        Ejercicio # 57: Clase String / indexOf.
+          Realizar la búsqueda de un string clave en un string fuente. Se deberá ingresar una frase o texto (fuente) y
+          luego la clave a buscar. En caso de encontrarla, imprimir la posición, de lo contrario una leyenda que
+          indique que no está.
+      */
+
+    var cadena=prompt("Ingrese un texto: ");
+    var frase=prompt("Texto que desea verificar: ");
+    var posicion=cadena.indexOf(frase);
+    document.write(cadena + "<br>");
+    if(posicion!=-1){
+      document.write("La frase se encuentra en el texto desde la posición " + posicion);
+    }
+    else{
+      document.write("La frase no se encuentra en el texto.");
+    }
+
+  </script>
+</body>
+</html>

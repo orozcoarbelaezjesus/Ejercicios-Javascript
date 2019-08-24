@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 27</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicio # 27: while / if
+          En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que
+          lea los sueldos que cobra cada empleado e informe cuántos empleados cobran entre $100 y $300 y
+          cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en
+          sueldos al personal.
+    */
+
+    var sueldo=0;
+    var c_ccc=0;
+    var may_ccc=0;
+    var importe=0;
+    var contador=1;
+
+    while(contador<6){
+      sueldo=parseInt(prompt(contador + ". Sueldo: "));
+      document.write(contador + ". Sueldo: " + sueldo + "<br>");
+      if(sueldo>=100 && sueldo<=300){
+        c_ccc=c_ccc+1;
+      }
+      if(sueldo>300){
+        may_ccc=may_ccc+1;
+      }
+      importe=importe+sueldo;
+      contador=contador+1;
+    }
+    document.write("<br>");
+    document.write("Cantidad de empleados que cobran entre 100 y 300: " + c_ccc);
+    document.write("<br>");
+    document.write("Cantidad de empleados que cobran más de 300: " + may_ccc);
+    document.write("<br>");
+    document.write("Importe total: " + importe);
+  </script>
+</body>
+</html>

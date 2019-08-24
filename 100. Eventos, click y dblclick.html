@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Ejercicio 100</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 100: Eventos, click y dblclick.
+      Realizar un programa que muestre en un div el número 2. Cada vez que se hace doble clic sobre el
+      mismo duplicar el valor contenido en el div.
+  */
+
+addEventListener('load',inicio,false);
+var resultado=2;
+
+function inicio(){
+  document.getElementById('cuadrado').addEventListener('click',modificar,false);
+}
+
+function modificar(){
+  resultado=resultado*2;
+  document.getElementById('cuadrado').innerHTML=resultado;
+
+}
+
+</script>
+
+<div id="cuadrado" style="display:flex;justify-content:center;align-items:center;width:100px;height:100px;border:1px solid black">2</div>
+
+</body>
+</html>

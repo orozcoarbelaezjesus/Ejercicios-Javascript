@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Ejercicio 98</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+      Ejercicio # 98: Funciones, parámetros de tipo función.
+        Implementar una función que reciba tres parámetros y que el tercero
+        sea una función.
+  */
+
+function operacion(pValor,sValor,funcion){
+   var resultado=funcion(pValor,sValor);
+   return resultado;
+}
+
+function sumar(pValor,sValor){
+  return pValor+sValor;
+}
+
+function restar(pValor,sValor){
+  return pValor-sValor;
+}
+
+function multiplicar (pValor,sValor){
+  return pValor*sValor;
+}
+
+function dividir(pValor,sValor){
+  return pValor/sValor;
+}
+
+var primerValor=parseInt(prompt("Ingresar primer valor"));
+var segundoValor=parseInt(prompt("Ingresar segundo valor"));
+
+document.write("Primer número: " + primerValor + "<br>" + "Segundo número: " + segundoValor + "<br>" + "<br>");
+
+//Operaciones
+
+var s=operacion(primerValor,segundoValor,sumar);
+document.write("Suma: " + s + "<br>");
+
+var r=operacion(primerValor,segundoValor,restar);
+document.write("Resta: " + r + "<br>");
+
+var m=operacion(primerValor,segundoValor,multiplicar);
+document.write("Multiplicar: " + m + "<br>");
+
+var d=operacion(primerValor,segundoValor, dividir);
+document.write("División: " + d + "<br>");
+
+</script>
+
+</body>
+</html>

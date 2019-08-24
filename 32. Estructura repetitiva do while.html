@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 32</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 32: Estructura repetitiva do while.
+        Realizar un programa que acumule (sume) valores ingresados por teclado hasta ingresa el 9999
+        (no sumar dicho valor, solamente indica que ha finalizado la carga). Imprimir el valor
+        acumulado e informar si dicho valor es cero, mayor a cero o menor a cero.
+    */
+
+    var num=0;
+    var acumulado=0;
+    do{
+      acumulado=acumulado+num;
+      num=parseInt(prompt("Ingrese un número: "));
+      document.write(num + "<br>");
+    }while(num!=9999);
+
+    document.write("Carga finalizada." + "<br>" + "Suma total: " + acumulado);
+
+    if(acumulado>0){
+      document.write("<br>" + "El valor acumulado es mayor que cero.");
+    }
+    else if(acumulado<0){
+      document.write("<br>" + "El valor acumulado es menor que cero.");
+    }
+    else{
+      document.write("<br>" + "El valor acumulado es cero.");
+    }
+
+  </script>
+</body>
+</html>

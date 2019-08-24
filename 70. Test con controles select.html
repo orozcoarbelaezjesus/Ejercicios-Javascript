@@ -1,0 +1,98 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 70</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 70: Test con controles select.
+        Confeccionar una página que permita tomar un examen múltiple choice. Se debe mostrar una pregunta y
+        seguidamente un objeto SELECT con las respuestas posibles. Al presionar un botón mostrar la
+        cantidad de respuestas correctas e incorrectas (Disponer 4 preguntas y sus respectivos controles SELECT)
+    */
+
+  function calificar(){
+    var primera=document.getElementById("primera");
+    var segunda=document.getElementById("segunda");
+    var tercera=document.getElementById("tercera");
+    var cuarta=document.getElementById("cuarta");
+    var nota=0;
+
+    if(primera.options[primera.selectedIndex].value==3){
+      nota=nota+5;
+    }
+
+    if(segunda.options[segunda.selectedIndex].value==1){
+      nota=nota+5;
+    }
+
+    if(tercera.options[tercera.selectedIndex].value==1){
+      nota=nota+5;
+    }
+
+    if(cuarta.options[cuarta.selectedIndex].value==2){
+      nota=nota+5;
+    }
+
+    var p_respuesta=primera.options[primera.selectedIndex].text;
+    var s_respuesta=segunda.options[segunda.selectedIndex].text;
+    var t_respuesta=tercera.options[tercera.selectedIndex].text;
+    var c_respuesta=cuarta.options[cuarta.selectedIndex].text;
+
+    document.write("Primera pregunta: Cuál es el simbolo quimico del calcio?" + "<br>" + "Usted respondio: " + p_respuesta + "<br>" + "Respuesta correcta: Ca" + "<br>" + "<br>");
+    document.write("Segunda pregunta: Cuanto vale Pi?" + "<br>" + "Usted respondio: " + s_respuesta + "<br>" + "Respuesta correcta: 3.14159265359" + "<br>" + "<br>");
+    document.write("Tercera pregunta: " + "<br>" + "Usted respondio: " + t_respuesta + "<br>" + "Respuesta correcta: A los perros (en latín llamados canis)" + "<br>" + "<br>");
+    document.write("Cuarta pregunta: " + "<br>" + "Usted respondio: " + c_respuesta + "<br>" + "Respuesta correcta: 116 años" + "<br>" + "<br>");
+
+    document.write("Calificación obtenida: " + nota + "<br>" + "<br>");
+
+    if(nota>=18){
+      document.write("Aprobado." + "<br>" + "Nivel: Nivel superior.");
+    }
+    if(nota>=15 && nota<=17){
+      document.write("Aprobado." + "<br>" + "Nivel: Nivel medio.");
+    }
+    if(nota>9 && nota<15){
+      document.write("Aprobado." + "<br>" + "Nivel: Nivel inferior.");
+    }
+    if(nota<10){
+      document.write("Aplazado." + "<br>" + "Nivel: Fuera de nivel.");
+    }
+  }
+
+  </script>
+
+  <label for="primera">Cuál es el simbolo quimico del calcio?</label><br>
+  <select id="primera">
+    <option value="1">Cl</option>
+    <option value="2">Co</option>
+    <option value="3">Ca</option>
+  </select><br><br>
+
+  <label for="segunda">Cuanto vale Pi?</label><br>
+  <select id="segunda">
+    <option value="1">3.14159265359</option>
+    <option value="2">3.14159262359</option>
+    <option value="3">3.14159265959</option>
+  </select><br><br>
+
+  <label for="tercera">A qué animal deben su nombre las islas canarias?</label><br>
+  <select id="tercera">
+    <option value="1">A los perros</option>
+    <option value="2">A las tortugas</option>
+    <option value="3">A los canarios</option>
+  </select><br><br>
+
+  <label for="cuarta">Cuanto duro la famosa guerra de los cien años?</label><br>
+  <select id="cuarta">
+    <option value="1">102 años</option>
+    <option value="2">116 años</option>
+    <option value="3">100 años</option>
+  </select><br><br>
+
+  <input type="button" value="Finalizar prueba" onClick="calificar()">
+
+</body>
+</html>

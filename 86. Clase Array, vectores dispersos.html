@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 86</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+/*
+   Ejercicio # 86: Clase Array, vectores dispersos.
+      Crear un vector disperso que representen premios de una rifa. Las posiciones indican los números que tienen premio. Almacenar en dichas posiciones los premios. Genera 10 premios con los montos 1000,2000,3000 etc.
+        La cantidad de números de la rifa son 100.
+        Generar valores aleatorios para los números con premio.
+        Imprimir Los números con premio y los montos de los mismos.
+*/
+
+function aleatorio(){
+  var aleatorio=parseInt(Math.random() * (1001 - 1) + 1);
+  return aleatorio;
+}
+
+var i=0;
+var vector=new Array(1000);
+var pos;
+
+for(i=0;i<10;i++){
+
+  pos=aleatorio();
+
+  if(i==10){
+    vector[pos]=3000;
+  }
+
+  else if(i==8){
+    vector[pos]=2000;
+  }
+
+  else{
+    vector[pos]=1000;
+  }
+}
+
+/*
+for(i=0;i<1000;i++){
+  document.write(vector[i] + " ");
+}
+*/
+
+num=parseInt(prompt("Ingrese un número: "));
+
+if(vector[num]!==undefined){
+    if(vector[num]==1000){
+       alert("Felicidades! Usted gano " + vector[num]);
+    }
+    if(vector[num]==2000){
+       alert("Felicidades! Usted gano " + vector[num]);
+    }
+    if(vector[num]==3000){
+       alert("Felicidades! Usted gano " + vector[num]);
+    }
+}
+
+else{
+    alert("No acertó");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 22</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicio # 22: Estructura condicional if ( o ).
+           Se ingresan por teclado tres números, si al menos uno de los valores ingresados es
+           menor a 10, imprimir en la página la leyenda 'Alguno de los números es menor a diez'.
+    */
+
+    var primerNumero=parseInt(prompt("Ingrese el primer número: "));
+    var segundoNumero=parseInt(prompt("Ingrese el segundo número: "));
+    var tercerNumero=parseInt(prompt("Ingrese el tercer número: "));
+
+    document.write("Primer número: " + primerNumero + "<br>" + "Segundo número: " + segundoNumero + "<br>" + "tercer número: " + tercerNumero + "<br>");
+
+    if(primerNumero<10 || segundoNumero<10 || tercerNumero<10){
+      document.write("Alguno de los números es menor a diez.");
+    }
+    else{
+      document.write("Ninguno de los números es menor a diez.");
+    }
+
+  </script>
+</body>
+</html>

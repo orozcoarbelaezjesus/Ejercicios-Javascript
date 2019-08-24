@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 45</title>
+</head>
+<body>
+  <script>
+      /*
+        Ejercicio # 45: Funciones que retornan un valor.
+        Confeccionar una función a la cual le envíe tres enteros y retorne el mayor de ellos.
+      */
+    function retornar_mayor(pNum,sNum,tNum){
+        var num_mayor;
+        var clave=0;
+        if(pNum>=sNum && pNum>=tNum){
+          clave=1;
+          num_mayor=pNum;
+        }
+        if(sNum>=pNum && sNum>=tNum && clave==0){
+          clave=1;
+          num_mayor=sNum;
+        }
+        if(tNum>=pNum && tNum>=sNum && clave==0){
+          num_mayor=tNum;
+        }
+        return num_mayor;
+    }
+
+    var primerNumero=parseInt(prompt("Primer número"));
+    var segundoNumero=parseInt(prompt("Segundo número"));
+    var tercerNumero=parseInt(prompt("Tercer número"));
+    document.write("Primer número: " + primerNumero + "<br>" + "Segundo número: " + segundoNumero + "<br>" + "Tercer número: " + tercerNumero + "<br>" + "<br>");
+
+    document.write("Número mayor: " + retornar_mayor(primerNumero,segundoNumero,tercerNumero));
+
+  </script>
+</body>
+</html>

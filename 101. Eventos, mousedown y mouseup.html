@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Ejercicio 101</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 101: Eventos, mousedown y mouseup.
+      Elaborar un programa que muestre un div de color rojo. Cuando se
+      presione cambiar el color a amarillo y luego de soltar el botón
+      del mouse volver a pintar de rojo.
+  */
+
+addEventListener('load',inicio,false);
+
+function inicio(){
+    document.getElementById('cuadrado').addEventListener('mousedown',down('#ffff00'),false);
+    document.getElementById('cuadrado').addEventListener('mouseup',up('#ff0000'),false);
+}
+
+function down(color){
+    document.getElementById('cuadrado').style.background.color=color;
+    alert("Yellow");
+}
+
+function up(color){
+    document.getElementById('cuadrado').style.background.color=color;
+    alert("Red");
+}
+
+</script>
+
+<div style="background:red;border:1px solid black;width:200;height:200" id="cuadrado"></div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Ejercicio 107</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 107: Parámetros del método asociado addEventListener.
+      Implementar un tablero de TaTeTi. Asociar el evento click de los 9
+      botones a una única función. Alternar entre las "X" y "O". Mostrar
+      un mensaje cuando gana un jugador.
+  */
+
+  window.addEventListener('load', inicio, false);
+
+  function inicio() {
+    document.getElementById("formulario1").addEventListener('submit', validar, false);
+  }
+
+  function validar(evt) {
+    var cla1 = document.getElementById("clave1").value;
+    var cla2 = document.getElementById("clave2").value;
+    if (cla1!=cla2) {
+      alert('Las claves ingresadas son distintas');
+      evt.preventDefault();
+    }
+  }
+</script>
+
+<form method="post" action="procesar.php" id="formulario1">
+  Ingrese clave:
+  <input type="password" id="clave1" name="clave1" size="20" required>
+  <br>
+  Repita clave:
+  <input type="password" id="clave2" name="clave2" size="20" required>
+  <br>
+  <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+</form>
+
+</body>
+</html>

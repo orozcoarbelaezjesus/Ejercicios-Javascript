@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9</title>
+</head>
+<body>
+  <script>
+
+  /*
+    Ejercicio # 9: Estructura condicional if (==).
+      Solicitar que se ingrese dos veces una clave. Mostrar un mensaje si son iguales
+      (tener en cuenta que para ver si dos variables tienen el mismo valor almacenado
+      debemos utilizar el operador ==).
+  */
+
+  var primeraClave=parseInt(prompt("Ingrese una contraseña: "));
+  var segundaClave=parseInt(prompt("Ingrese nuevamente la contraseña: "));
+
+  if(primeraClave==segundaClave){
+    document.write("Registro éxitoso.");
+  }
+
+  else{
+    alert("La contraseña no coincide");
+    document.write("No se pudo registrar.");
+  }
+
+  </script>
+</body>
+</html>

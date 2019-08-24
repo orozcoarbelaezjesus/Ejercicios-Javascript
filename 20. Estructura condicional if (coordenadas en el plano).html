@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 20</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 20: Estructura condicional if (coordenadas en el plano).
+        Escribir un programa que pida ingresar la coordenada de un punto en el plano, es decir
+        dos valores enteros x e y.
+        Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho punto.
+        (1º Cuadrante si x > 0 Y y > 0 , 2º Cuadrante: x < 0 Y y > 0, etc.).
+    */
+
+    var x=parseInt(prompt("X: "));
+    var y=parseInt(prompt("Y: "));
+
+    document.write("X: " + x + "<br>" + "Y: " + y + "<br>" + "<br>");
+
+    if(x>0 && y>0){
+      document.write("El punto se encuentra en el primer cuadrante.");
+    }
+
+    if(x>0 && y<0){
+      document.write("El punto se encuentra en el cuarto cuadrante.");
+    }
+
+    if(x<0 && y<0){
+      document.write("El punto se encuentra en el tercer cuadrante.");
+    }
+
+    if(x<0 && y>0){
+      document.write("El punto se encuentra en el segundo cuadrante.");
+    }
+  </script>
+</body>
+</html>

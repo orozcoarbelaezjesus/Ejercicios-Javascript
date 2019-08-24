@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  var oracion=prompt("Ingrese una oración");
+  document.write(oracion + "<br>");
+  var patron1=/^Pro/;
+
+  if (patron1.test(oracion)){
+    document.write("La oración comienza con el patrón pro" + "<br>");
+  }
+  else{
+    document.write("La oración no comienza con el patrón pro" + "<br>");
+  }
+
+  var patron2=/ón$/;
+  if (patron2.test(oracion)){
+    document.write("La oración términa con el patrón ón");
+  }
+  else{
+    document.write("La oración no términa con el patrón ón");
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 23</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 23: Estructura switch.
+        Solicitar el ingreso alguna de estas palabras (casa, mesa, perro, gato) luego
+        mostrar la palabra traducida en inglés. Es decir, si se ingresa 'casa' debemos
+        mostrar el texto 'house' en la página.
+    */
+
+    var palabra=prompt("Escriba: casa, mesa, perro o gato");
+
+    palabra=palabra.toUpperCase();
+
+    switch(palabra){
+      case "CASA": document.write("Palabra: " + palabra + "<br>" + "Traducción al inglés: House");
+      break;
+      case "MESA": document.write("Palabra: " + palabra + "<br>" + "Traducción al inglés: Table");
+      break;
+      case "PERRO": document.write("Palabra: " + palabra + "<br>" + "Traducción al inglés: Dog");
+      break;
+      case "GATO": document.write("Palabra: " + palabra + "<br>" + "Traducción al inglés: Cat");
+      break;
+    }
+
+  </script>
+</body>
+</html>

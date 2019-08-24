@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Ejercicio 104</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 104: Eventos, keydown, keyup y keypress.
+      implementar un programa que permita solo ingresar 140 caracteres y nos
+      informe con un mensaje la cantidad de caracteres disponibles para seguir
+      escribiendo.
+  */
+
+  addEventListener('load',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('texto').addEventListener('keyup',presion,false);
+  }
+
+  function presion()
+  {
+    var canti=document.getElementById('texto').value.length;
+    var disponibles=140-parseInt(canti);
+    document.getElementById('cantidad').innerHTML=disponibles;
+  }
+</script>
+
+<textarea cola="40" rows="5" id="texto" maxlength="140" size="140"></textarea>
+<br>
+<p>Máxima cantidad de caracteres disponibles:<span id="cantidad">140</span></p>
+
+</body>
+</html>

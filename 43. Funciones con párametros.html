@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 43</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 43: Funciones con párametros.
+        Elaborar una función a la cual le enviemos tres enteros y muestre el menor.
+    */
+
+    function imprimir_menor(pNum,sNum,tNum){
+      var clave=0;
+      if(pNum<=sNum && pNum<=tNum && clave==0){
+        document.write(pNum);
+        clave=1;
+      }
+      if(sNum<=pNum && sNum<=tNum && clave==0){
+        document.write(sNum);
+        clave=1;
+      }
+      if(tNum<=pNum && tNum<=sNum && clave==0){
+        document.write(tNum);
+      }
+    }
+    var primerNumero=parseInt(prompt("Primer número"));
+    var segundoNumero=parseInt(prompt("Segundo número"));
+    var tercerNumero=parseInt(prompt("Tercer número"));
+    document.write("Primer número: " + primerNumero + "<br>" + "Segundo número: " + segundoNumero + "<br>" + "Tercer número: " + tercerNumero + "<br>" + "Número menor: ");
+    imprimir_menor(primerNumero,segundoNumero,tercerNumero);
+
+  </script>
+</body>
+</html>

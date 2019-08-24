@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Ejercicio 114</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 114: Expresiones regulares.
+      Ingresar una oración por teclado y luego imprimir un
+      mensaje si la oración ingresada contiene la palabra 'hora'.
+  */
+
+  var oracion=prompt('Ingrese una oración','');
+  var patron=/hora/;
+  if (patron.test(oracion))
+    alert('La oración ingresada contiene la palabra \'hora\'');
+  else
+    alert('La oración ingresada no contiene la palabra \'hora\'');
+</script>
+
+</body>
+</html>

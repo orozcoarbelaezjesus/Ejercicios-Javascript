@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Ejercicio 102</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    /*
+      Ejercicio # 102: Eventos, mouseover y mouseout.
+        Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse
+        dentro del mismo cambiar el color a letra roja y color de fondo
+        amarillo, luego cuando se mueva la flecha del mouse fuera del elemento
+        volver al color original.
+    */
+
+addEventListener('load',inicio,false);
+
+function inicio(){
+  document.getElementById("titulo").addEventListener('mouseover',over('#ff0000','#ffff00'),false);
+  document.getElementById("titulo").addEventListener('mouseout',out('#000000','#ffffff'),false);
+}
+
+function over(color,background){
+   document.getElementById("titulo").style.color=color;
+   document.getElementById("titulo").style.background=background;
+}
+
+function out(color,background){
+   document.getElementById("titulo").style.color=color;
+   document.getElementById("titulo").style.background=background;
+}
+
+</script>
+
+<h1 style="border:1px solid black,color:black;background:white" id="titulo">Título de nivel uno</h1>
+
+</body>
+</html>

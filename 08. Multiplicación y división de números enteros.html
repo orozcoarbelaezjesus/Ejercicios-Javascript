@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8</title>
+</head>
+<body>
+  <script>
+  
+    /*
+      Ejercicio # 8: Multiplicación y división de números enteros.
+        Se ingresan tres notas de un alumno, si el promedio es mayor o igual a siete mostrar el
+        mensaje 'Promocionado'.
+    */
+
+    var primeraNota=parseInt(prompt("Ingrese la primera nota: "));
+    var segundaNota=parseInt(prompt("Ingrese la segunda nota: "));
+    var terceraNota=parseInt(prompt("Ingrese la tercera nota: "));
+
+    var promedio=(primeraNota+segundaNota+terceraNota)/3;
+
+    document.write("Primera Nota: " + primeraNota);
+    document.write("<br>");
+    document.write("Segunda Nota: " + segundaNota);
+    document.write("<br>");
+    document.write("Tercera Nota: " + terceraNota);
+    document.write("<br>");
+    document.write("Promedio: " + promedio);
+    document.write("<br>");
+
+    if(promedio>=7){
+      document.write("Promocionado.");
+    }
+    else{
+      document.write("Reprobado.");
+    }
+
+  </script>
+</body>
+</html>

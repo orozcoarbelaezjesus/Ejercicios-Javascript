@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 34</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 34: Estructura repetitiva do while / Estructura condicional if.
+        En un banco se procesan datos de las cuentas corrientes de sus clientes. De cada cuenta corriente se conoce: número de cuenta,
+        nombre del cliente y saldo actual. El ingreso de datos debe finalizar al ingresar un valor negativo en el número de cuenta.
+        Se pide confeccionar un programa que lea los datos de las cuentas corrientes e informe:
+        a) De cada cuenta: número de cuenta, nombre del cliente y estado de la cuenta según su saldo, sabiendo que:
+          Estado de la cuenta	'Acreedor' si el saldo es >0.
+          'Deudor' si el saldo es <0.
+          'Nulo' si el saldo es =0.
+        b) La suma total de los saldos acreedores.
+    */
+
+    var num_cuenta=0;
+    var nombre_cliente=0;
+    var saldo=0;
+    var total_acreedores=0;
+
+    do{
+      num_cuenta=parseInt(prompt("Número de cuenta"));
+      if(num_cuenta>=0){
+        nombre_cliente=prompt("Nombre del cliente");
+        saldo=parseInt(prompt("Saldo: "));
+        document.write("Número de cuenta: " + num_cuenta + "<br>" + "Nombre del cliente: " + nombre_cliente + "<br>" + "Saldo: " + saldo + "<br>" + "Estado de la cuenta: ");
+        if(saldo>0){
+          document.write("Acreedor.");
+          total_acreedores=total_acreedores+saldo;
+        }
+        else if(saldo<0){
+          document.write("Deudor.");
+        }
+        else{
+          document.write("Nulo.");
+        }
+        document.write("<br>" + "<br>");
+      }
+    }while(num_cuenta>=0);
+
+    document.write("Total saldos acreedores: " + total_acreedores);
+
+  </script>
+</body>
+</html>

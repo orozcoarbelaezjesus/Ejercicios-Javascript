@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 13</title>
+</head>
+<body>
+  <script>
+
+  /*
+      Ejercicio # 13: Estructura condicional if
+        Se cargan por teclado tres números distintos. Mostrar por pantalla el mayor de ellos.
+  */
+
+  var clave=0;
+  var primerNumero=parseInt(prompt("Ingrese el primer número: "));
+  var segundoNumero=parseInt(prompt("Ingrese el segundo número: "));
+  var tercerNumero=parseInt(prompt("Ingrese el tercer número: "));
+
+  document.write("Primer número: " + primerNumero);
+  document.write("<br>");
+  document.write("Segundo número: " + segundoNumero);
+  document.write("<br>");
+  document.write("tercer numero: " + tercerNumero);
+  document.write("<br>");
+  document.write("<br>");
+
+  if(clave==0){
+    if(primerNumero>=segundoNumero){
+      if(primerNumero>=tercerNumero){
+        clave=1;
+        document.write("Número mayor: " + primerNumero);
+      }
+    }
+  }
+
+  if(clave==0){
+    if(segundoNumero>=primerNumero){
+      if(segundoNumero>=tercerNumero){
+        clave=1;
+        document.write("Número mayor: " + segundoNumero);
+      }
+    }
+  }
+
+  if(clave==0){
+    if(tercerNumero>=primerNumero){
+      if(tercerNumero>=segundoNumero){
+        document.write("Numero mayor: " + tercerNumero);
+      }
+    }
+  }
+
+  </script>
+</body>
+</html>

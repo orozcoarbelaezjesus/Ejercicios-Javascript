@@ -1,0 +1,87 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 60</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 60: Clase String / Imprimir vocales, último caracter, texto invertido.
+        Cargar un String por teclado e implementar las siguientes funciones:
+          a) Imprimir la primera mitad de los caracteres de la cadena.
+          b) Imprimir el último carácter.
+          c) Imprimirlo en forma inversa.
+          d) Imprimir cada carácter del String separado con un guión.
+          e) Imprimir la cantidad de vocales almacenadas.
+    */
+
+    function imprimir_mitad(string){
+      var condicion=string.length;
+      condicion=condicion/2;
+      document.write("Imprimir mitad de la cadena: ");
+      for(i=0;i<condicion;i++){
+        document.write(string.charAt(i));
+      }
+    }
+
+    function ultimo_caracter(string){
+      var u=string.length;
+      document.write("<br>" + "Imprimir último caracter: " + string.charAt(u-1));
+    }
+
+    function inversa(string){
+      var tam=string.length;
+      tam=tam-1;
+      var i=0;
+      document.write("<br>" + "Imprimir a la inversa: ");
+      for(i=tam;i>=0;i--){
+        document.write(string.charAt(i));
+      }
+    }
+
+    function guion(string){
+      var i=0;
+      var tam=string.length;
+      document.write("<br>" + "Imprimir caracteres separados por un guion: ");
+      for(i=0;i<tam;i++){
+        document.write(string.charAt(i));
+        if(i!=tam-1){
+          document.write("-");
+        }
+      }
+    }
+
+    function vocales(string){
+      var i=0;
+      var tam=string.length;
+      document.write("<br>" + "Vocales: ");
+      for(i=0;i<tam;i++){
+        if(string.charAt(i)=="a" || string.charAt(i)=="A"){
+          document.write(string.charAt(i) + ". ");
+        }
+        if(string.charAt(i)=="e" || string.charAt(i)=="E"){
+          document.write(string.charAt(i) + ". ");
+        }
+        if(string.charAt(i)=="i" || string.charAt(i)=="I"){
+          document.write(string.charAt(i) + ". ");
+        }
+        if(string.charAt(i)=="o" || string.charAt(i)=="O"){
+          document.write(string.charAt(i) + ". ");
+        }
+        if(string.charAt(i)=="u" || string.charAt(i)=="U"){
+          document.write(string.charAt(i) + ". ");
+        }
+      }
+    }
+
+    var string=prompt("Ingrese un texto");
+    document.write("Texto ingresado: " + string + "<br>");
+    imprimir_mitad(string);
+    ultimo_caracter(string);
+    inversa(string);
+    guion(string);
+    vocales(string);
+  </script>
+</body>
+</html>

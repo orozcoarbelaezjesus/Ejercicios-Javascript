@@ -1,0 +1,31 @@
+ <html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Ejercicio 56</title>
+ </head>
+ <body>
+   <script>
+
+       /*
+         Ejercicio # 56: Clase String (toLowerCase/toUpperCase).
+           Igual al anterior, pero que termine la aplicación sin contemplar mayúsculas ni minúsculas.
+           Es decir que para salir se pueda teclear fin, Fin o FIN.
+       */
+
+       var nombres="Fin";
+       var cant_nom=0;
+       var minuscula="minuscula";
+       while(minuscula!="fin"){
+         nombres=prompt("Ingrese un nombre para imprimir o fin para finalizar");
+         document.write(nombres + "<br>");
+         minuscula=nombres.toLowerCase();
+         if(minuscula!="fin"){
+           cant_nom=cant_nom+1;
+         }
+       }
+
+       document.write("<br>" + "Cantidad de nombres ingresados: " + cant_nom);
+
+   </script>
+ </body>
+ </html>

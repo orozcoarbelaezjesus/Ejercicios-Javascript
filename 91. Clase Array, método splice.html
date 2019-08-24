@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 91</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+      Ejercicio # 91: Clase Array, método splice.
+        Crear un vector con una lista de valores. Luego borrar las componentes
+        donde hay un 2 y al mismo tiempo insertar dos elementos con el valor 1.
+  */
+
+var vector=[3,2,3,2];
+var i;
+
+
+for(i=0;i<vector.length;i++){
+    document.write(vector[i] + ". ");
+}
+
+document.write("<br>" + "<br>");
+
+for(i=0;i<vector.length;i++){
+   if(vector[i]==2){
+      vector.splice(i,i,1,1);
+   }
+}
+
+for(i=0;i<vector.length;i++){
+    document.write(vector[i] + ". ");
+}
+</script>
+
+</body>
+</html>

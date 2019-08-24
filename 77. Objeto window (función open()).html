@@ -1,0 +1,25 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 77</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 77: Objeto window (función open()).
+        Confeccionar una página que permita abrir otra ventana cuando se presiona un botón.
+        Dicha ventana debe tener como ancho 600 pixeles y alto 300 pixeles.
+    */
+
+  function nueva_ventana(){
+    var ventana=open('','','status=yes,width=600,height=300,menubar=yes');
+    ventana.document.write("Está es una ventana con 600px de ancho y 300px de alto");
+  }
+
+  </script>
+
+  <input type="button" value="600X300" onClick="nueva_ventana()">
+
+</body>
+</html>

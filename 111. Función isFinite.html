@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Ejercicio 111</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 111: Función is Finite.
+      Se ingresan por teclado dos números (emplear parseFloat para convertirlos)
+      mostrar un mensaje si alguno de los dos no es un número (isNaN). Luego
+      si son valores numéricos proceder a multiplicarlos y verificar si el
+      resultado es finito (isFinite) para mostrar el resultado.
+  */
+
+var primerNum=parseFloat(prompt("Ingrese el primer número: "));
+var segundoNum=parseFloat(prompt("Ingrese el segundo número: "));
+
+if(isNaN(primerNum)){
+  alert("El primer número ingresado no es un valor numérico");
+}
+else{
+  if(isNaN(segundoNum)){
+     alert("El segundo número ingresado no es un valor numérico");
+  }
+  else{
+     var resultado=parseFloat(primerNum+segundoNum).toFixed(2);
+     if(isFinite(resultado)){
+       alert(resultado);
+     }
+     else{
+       alert("El resultado no es un valor finito");
+       alert(resultado);
+     }
+  }
+}
+
+</script>
+
+</body>
+</html>

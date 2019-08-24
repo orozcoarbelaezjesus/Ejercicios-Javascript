@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Ejercicio 103</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 103: Eventos, mousemove.
+      Implementar una página que muestre un div que capture el evento mousemove
+      y como acción incremente un contador para saber la cantidad de veces que
+      se disparó el evento.
+  */
+
+  var x=0;
+
+  addEventListener('load',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('recuadro1').addEventListener('mousemove',mover,false);
+  }
+
+  function mover()
+  {
+    x+=1;
+    document.getElementById('cantidad').innerHTML=x;
+  }
+</script>
+
+  <div style="width:200px;height:200px;background:#0000ff" id="recuadro1">
+  </div>
+  <p id="cantidad">0</p>
+
+</body>
+</html>

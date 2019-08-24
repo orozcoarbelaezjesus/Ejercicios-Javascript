@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11</title>
+</head>
+<body>
+  <script>
+
+  /*
+      Ejercicio # 11: if / else
+        Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje
+        'regular', sino 'reprobado'.
+  */
+
+  var primeraNota=parseInt(prompt("Ingrese la primera nota: "));
+  var segundaNota=parseInt(prompt("Ingrese la segunda nota: "));
+  var terceraNota=parseInt(prompt("Ingrese la tercera nota: "));
+
+  var promedio=(primeraNota+segundaNota+terceraNota) / 3;
+
+  document.write("Pimera nota: " + primeraNota + "<br>" + "Segunda nota: " + segundaNota + "<br>" + "Tercera nota. " + terceraNota + "<br>" + "Nivel: ");
+
+  if(promedio>=4){
+    document.write("Regular.");
+  }
+  else{
+    document.write("Reprobado.");
+  }
+
+  </script>
+</body>
+</html>

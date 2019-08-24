@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 80</title>
+</head>
+<body>
+  <script>
+  /*
+    Ejercicio # 80: Propiedad navigator del objeto window.
+      Una vez que se cargue la página mostrar un alert indicando si el navegador tiene activas
+      las cookies.
+  */
+
+  function verificar(){
+    if(navigator.cookieEnabled){
+      alert("Cookies activas");
+    }
+    else{
+      alert("Cookies inactivas");
+    }
+  }
+
+  </script>
+
+  <input type="button" value="Verificar cookies" onClick="verificar()">
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Ejercicio 84</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 84: Declaración de vectores.
+      Confeccionar un programa que defina dos array, en uno almacenar los días
+      de la semana y en otro los nombres de los meses. Emplear dos sintaxis
+      diferentes para crear e inicializar sus componentes.
+  */
+
+var i;
+var vector1=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado"];
+var vector2=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+
+  document.write("Vector Uno: ");
+  for(i=0;i<7;i++){
+   document.write(vector1[i] + ". ");
+  }
+
+   document.write("<br>" + "<br>" + "Vector Dos: ");
+   for(i=0;i<12;i++){
+   document.write(vector2[i] + ". ");
+  }
+
+</script>
+
+</body>
+</html>

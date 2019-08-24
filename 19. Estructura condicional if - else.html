@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 19</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicion # 19: Estructura condicional if / else.
+          Se ingresan por teclado tres números, si todos los valores ingresados son menores a 10,
+          imprimir en la página la leyenda ' Todos los números son menores a diez'.
+    */
+
+    var primerNumero=parseInt(prompt("Ingrese el primer número: "));
+    var segundoNumero=parseInt(prompt("Ingrese el segundo número: "));
+    var tercerNumero=parseInt(prompt("Ingrese el tercer número: "));
+
+    if(primerNumero<10 && segundoNumero<10 && tercerNumero<10){
+      document.write("Todos los números son menores que 10.");
+    }
+    else{
+      document.write("Alguno de los números no es menor que 10.");
+    }
+
+  </script>
+</body>
+</html>

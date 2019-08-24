@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 85</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 85: Clase Array, vectores densos.
+      Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500.
+      Luego crear otros dos vectores y copiar los elementos menores a 250 en
+      el segundo vector y los mayores o iguales a 250 en el tercer vector.
+      Imprimir los tamaños del segundo y tercer vector. Imprimir los tres
+      vectores.
+  */
+
+function aleatorio() {
+  var aleatorio=Math.random() * (501 - 1) + 1;
+  return aleatorio;
+}
+
+var vector1=new Array(10);
+var vector2=new Array();
+var vector3=new Array();
+var i;
+var j=0;
+
+document.write("Vector uno: ");
+for(i=0;i<10;i++){
+   vector1[i]=parseInt(aleatorio());
+   document.write(vector1[i] + ". ");
+}
+
+document.write("<br>" + "<br>" + "Vector dos: ");
+for(i=0;i<10;i++){
+  if(vector1[i]<250){
+     vector2[j]=vector1[i];
+     document.write(vector2[j] + ". ");
+     j=j+1;
+  }
+}
+
+j=0;
+document.write("<br>" + "<br>" + "Vector tres: ");
+for(i=0;i<10;i++){
+  if(vector1[i]>=250){
+     vector3[j]=vector1[i];
+     document.write(vector3[j] + ". ");
+     j=j+1;
+  }
+}
+
+document.write("<br>" + "<br>" + "Tamaño del segundo vector: " + vector2.length + "<br>" + "Tamaño del tercer vector: " + vector3.length);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>Ejercicio 105</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+
+<script>
+
+  /*
+    Ejercicio # 105: Evento change.
+      Confeccionar un formulario que muestre un checkbox que cuando se tilde
+      active un botón (el checkbox debe mostrar un mensaje que diga :
+      "Confirma los términos y condiciones?")
+  */
+
+  addEventListener('load',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('checkbox1').addEventListener('change',cambiocheckbox,false);
+    document.getElementById('radioa').addEventListener('change',cambioradio,false);
+    document.getElementById('radiob').addEventListener('change',cambioradio,false);
+    document.getElementById('radioc').addEventListener('change',cambioradio,false);
+    document.getElementById('select1').addEventListener('change',cambioselect,false);
+    document.getElementById('text1').addEventListener('change',cambiotext,false);
+    document.getElementById('textarea1').addEventListener('change',cambiotextarea,false);
+    document.getElementById('terminos').addEventListener('change',terminos,false);
+  }
+
+  function cambiocheckbox()
+  {
+  alert(document.getElementById('checkbox1').checked);
+  }
+
+  function cambioradio()
+  {
+    alert(document.getElementById('radioa').checked+' '+
+          document.getElementById('radiob').checked+' '+
+          document.getElementById('radioc').checked);
+  }
+
+  function cambioselect()
+  {
+    alert(document.getElementById('select1').value);
+  }
+
+  function cambiotext()
+  {
+    alert(document.getElementById('text1').value);
+  }
+
+  function cambiotextarea()
+  {
+    alert(document.getElementById('textarea1').value);
+  }
+
+  function terminos(){
+    alert("Al continuar navegando usted acepta los términos y condiciones");
+  }
+</script>
+
+Evento change del checkbox:<br>
+<input type="checkbox" id="checkbox1" name="checkbox1" checked>
+<br>
+Evento change del radio:<br>
+<input type="radio" name="radio1" id="radioa"><br>
+<input type="radio" name="radio1" id="radiob"><br>
+<input type="radio" name="radio1" id="radioc"><br>
+Evento change del select:<br>
+<select name="select1" id="select1">
+  <option value="argentina">Argentina</option>
+  <option value="chile">Chile</option>
+  <option value="uruguay">Uruguay</option>
+  <option value="paraguay">Paraguay</option>
+  <option value="bolivia">Bolivia</option>
+</select>
+<br>
+Evento Change del text:<br>
+<input type="text" name="text1" id="text1">
+<br>
+Evento change del textarea:<br>
+<textarea name="text1" id="textarea1" rows="6" cols="80"></textarea>
+<br>
+<input type="checkbox" id="terminos">Términos y condiciones.
+
+</body>
+</html>

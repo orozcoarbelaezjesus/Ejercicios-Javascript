@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 18</title>
+</head>
+<body>
+  <script>
+
+    /*
+        Ejercicio # 18: Estructura condicional if (suma y multiplicación).
+          Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del primero
+          con el segundo y a este resultado se lo multiplica por el tercero (tener en cuenta que
+          puede haber tres condiciones simples).
+    */
+
+    var primerValor=parseInt(prompt("Ingrese el primer valor: "));
+    var segundoValor=parseInt(prompt("Ingrese el segundo valor: "));
+    var tercerValor=parseInt(prompt("Ingrese el tercer valor: "));
+
+    document.write("Primer valor " + primerValor + "<br>" + "Segundo valor: " + segundoValor + "<br>" + "Tercer valor: " + tercerValor + "<br>" + "<br>");
+
+    if(primerValor==segundoValor && segundoValor==tercerValor){
+      var operacion=(primerValor+segundoValor) * tercerValor;
+      document.write("Resultado: " + operacion);
+    }
+    else{
+      document.write("Los números no son iguales.");
+    }
+
+  </script>
+</body>
+</html>

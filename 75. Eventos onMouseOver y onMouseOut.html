@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    a{
+      color:black;
+      text-decoration:none;
+      display:flex;
+    }
+  </style>
+  <title>Ejercicio 75</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 75: Eventos onMouseOver y onMouseOut.
+        Modificar el segundo problema resuelto (las casillas de la tabla que cambian el
+        color cuando ingresamos con el mouse) para permitir llamar mediante hipervínculos
+        a distintos programas que administran web-mail (gmail, hotmail y yahoo)
+    */
+
+  function pintar(objeto,background,color){
+    objeto.style.color=color;
+    objeto.style.backgroundColor=background;
+  }
+
+  </script>
+
+  <table border="1">
+    <tr>
+      <td><a href="https://www.google.com/intl/es/gmail/about/" target="_blank" onMouseOver=pintar(this,'#d32600','#fff')  onMouseOut="pintar(this,'#fff','#d32600')">Gmail</a></td>
+      <td><a href="https://outlook.live.com/owa/" target="_blank" onMouseOver=pintar(this,'#2775ff','#fff')  onMouseOut="pintar(this,'#fff','#2775ff')">Hotmail</a></td>
+      <td><a href="https://espanol.yahoo.com/" target="_blank" onMouseOver=pintar(this,'#5026c2','#fff')  onMouseOut="pintar(this,'#fff','#5026c2')">Yahoo</a></td>
+    </tr>
+  </table>
+
+</body>
+</html>

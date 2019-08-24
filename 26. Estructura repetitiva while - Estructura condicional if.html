@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 26</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 26: Estructura repetitiva while / Estructura condicional if.
+        Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o
+        iguales a 7 y cuántos menores.
+    */
+
+    var nota;
+    var contador=1;
+    var cont_VII=0;
+    var men_VII=0;
+
+    while(contador<11){
+      nota=parseInt(prompt("Nota " + contador + ": "));
+      document.write(contador + ". Nota: " + nota + "<br>");
+      if(nota>=7){
+        cont_VII=cont_VII+1;
+      }
+      else{
+        men_VII=men_VII+1;
+      }
+      contador=contador+1;
+    }
+
+    document.write("Alumnos con notas mayores o iguales a siete: " + cont_VII + "<br>" + "Alumnos con notas menores que siete: " + men_VII);
+
+  </script>
+</body>
+</html>

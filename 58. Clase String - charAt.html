@@ -1,0 +1,39 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 58</title>
+</head>
+<body>
+  <script>
+
+    /*
+      Ejercicio # 58: Clase String / charAt.
+        Ingresar una palabra o texto por teclado y determinar si es o no una palabra palíndromo.
+        (Palabra que se lee de igual manera de adelante hacia atrás, que de atrás hacia delante).
+    */
+
+    var palabra=prompt("Ingrese una palabra");
+    var tam=palabra.length;
+    var i=0;
+    var aux=1;
+    var condicion=tam;
+
+    for(i=0;i<condicion;i++){
+        if(palabra.charAt(tam-1)!=palabra.charAt(i)){
+          aux=0;
+        }
+        tam=tam-1;
+    }
+
+    document.write(palabra + "<br>" + "<br>");
+
+    if(aux==1){
+      document.write("La palabra es palindromo.");
+    }
+    if(aux==0){
+      document.write("La palabra no es palindromo.");
+    }
+
+  </script>
+</body>
+</html>

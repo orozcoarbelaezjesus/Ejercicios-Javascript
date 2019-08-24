@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Ejercio 113</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+  /*
+    Ejercicio # 113: Operador condicional ?
+      Ingresar el sueldo bruto de un trabajador. Si supera a
+      10000 aplicar un descuento del 10%, en caso contrario el
+      descuento es del 5%.
+  */
+
+var sueldo=parseInt(prompt("Sueldo"));
+var suledoFinal;
+sueldo>10000 ? sueldoFinal=sueldo-(sueldo*0.10) : sueldoFinal=sueldo-(sueldo*0.05)
+
+document.write("Sueldo: " + sueldo + "<br>" + "Sueldo final: "+ sueldoFinal);
+
+</script>
+
+</body>
+</html>
